@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,11 +10,11 @@ export default function Nav() {
   function NavLinks() {
     return (
       <>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
+        <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
         <Link href="https://store.grantcardoneteam.com/?ref=UtWzq1w3jgsZd&fbclid=IwAR2_QGr93foFxTwFGS9s8kxoyALUjIvlmcvnaCZcWpQnA4mv6kvuuXhig0w">Shop</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+        <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </>
     )
   }
@@ -53,7 +53,7 @@ export default function Nav() {
       </div>
       {menuOpen && (
         <div className="bg-[#02071D] text-white absolute w-4/5 h-screen left-0 top-0 p-4 flex flex-col gap-8 z-50">
-          <Link href="/">
+          <Link href="/" onClick={() => setMenuOpen(false)}>
             <Image
               src="/img/icon.png" 
               width="48"
