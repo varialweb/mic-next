@@ -1,4 +1,4 @@
-import './globals.css'
+import '../globals.css'
 import { Montserrat } from '@next/font/google'
 import Nav from './Nav'
 import Footer from './Footer'

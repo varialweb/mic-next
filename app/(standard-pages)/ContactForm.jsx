@@ -2,7 +2,7 @@
 import ReCAPTCHA from 'react-google-recaptcha'
 import { useState } from "react"
 
-import Spinner from "./Spinner"
+import Spinner from "../Spinner"
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false)

@@ -20,7 +20,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="bg-[#02071D] flex items-center justify-between p-4 lg:px-16 lg:py-6 text-white">
+    <nav className="bg-[#02071D] flex items-center justify-between p-4 lg:px-16 lg:py-6 text-white sticky top-0 z-50">
       <Link href="/">
         <Image
           src="/img/icon.png" 
@@ -52,7 +52,7 @@ export default function Nav() {
         <NavLinks />
       </div>
       {menuOpen && (
-        <div className="bg-[#02071D] text-white absolute w-4/5 h-screen left-0 top-0 p-4 flex flex-col gap-8">
+        <div className="bg-[#02071D] text-white absolute w-4/5 h-screen left-0 top-0 p-4 flex flex-col gap-8 z-50">
           <Link href="/">
             <Image
               src="/img/icon.png" 
