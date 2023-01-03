@@ -90,7 +90,7 @@ export default function ContactForm() {
           </label>
       </div>
       <ReCAPTCHA
-                sitekey={recaptchaSiteKey}
+                sitekey={"6LelJsgjAAAAAMcEXJmMzAy6i-jtCDTf_UPOa1xj"}
                 onChange={value => setVerified(value ? true : false)}
             />
             {verifyError && <p className="text-red-700 font-medium inline">{verifyError}</p>}
